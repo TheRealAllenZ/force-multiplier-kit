@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Force Multiplier</title>
+  <meta name="description" content="Duplicate your work, without hiring a new person (yet). Filefeed the three files you already use. One prompt. Any AI. Free from Ethical AI." />
+  <link rel="canonical" href="https://ethicalai.me/force" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ethicalai.me/force" />
+  <meta property="og:title" content="Force Multiplier" />
+  <meta property="og:description" content="Duplicate your work, without hiring a new person (yet)." />
+  <meta property="og:image" content="https://assets.cdn.filesafe.space/REDACTED_GHL_LOCATION_ID/media/a5cc22b7-766e-4772-b138-78b10d9b28f6.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index,follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --blue:#0094FF;
+      --navy:#003A6B;
+      --orange:#FF8A3D;
+      --red:#E31B23;
+      --ink:#07070B;
+      --panel:#101018;
+      --card:#16161F;
+      --line:#2C2C3A;
+      --muted:#9AA3B2;
+      --white:#fff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--ink);color:var(--white);font-family:Inter,system-ui,sans-serif}
+    a{color:var(--blue)}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+    .nav{background:#000;position:sticky;top:0;z-index:30}
+    .nav-in{max-width:1120px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+    .brand-mark{width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;font:700 11px Oswald,sans-serif;letter-spacing:.08em}
+    .brand span{font:600 12px Oswald,sans-serif;letter-spacing:.18em}
+    .free-pill{background:var(--orange);color:#111;font:700 12px Oswald,sans-serif;letter-spacing:.14em;padding:6px 10px;border-radius:999px}
+    .hero{background:linear-gradient(165deg,var(--blue) 0%,var(--navy) 58%,#07070B 100%);padding:52px 0 40px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:52px 52px;opacity:.28;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:30px;align-items:start;position:relative}
+    .kicker{margin:0 0 8px;font:600 12px Oswald,sans-serif;letter-spacing:.22em}
+    h1{font:700 clamp(42px,6.4vw,72px)/.88 Oswald,sans-serif;text-transform:uppercase;margin:0 0 14px;letter-spacing:.01em}
+    .tagline{font-size:20px;line-height:1.35;max-width:540px;margin:0 0 16px;color:#F2F6FF}
+    .lede{font-size:16px;line-height:1.5;max-width:540px;margin:0 0 16px;color:#D7E6F7}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+    .chip{border:1px solid rgba(255,255,255,.32);padding:6px 10px;border-radius:999px;font-size:12px}
+    .price-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+    .tag{background:rgba(0,20,40,.45);border:1px solid rgba(255,255,255,.2);padding:7px 10px;border-radius:8px;font:700 12px Oswald,sans-serif;letter-spacing:.08em}
+    .tag.hot{background:var(--orange);color:#111;border-color:transparent}
+    .capture-card{background:#0C0C12;border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:22px;box-shadow:0 28px 60px rgba(0,0,0,.38)}
+    .capture-card h2{font:700 26px Oswald,sans-serif;text-transform:uppercase;margin:0 0 6px}
+    .capture-card h2 span{color:var(--orange)}
+    .capture-card .sub{color:#C9D3DE;font-size:14px;margin:0 0 14px}
+    form{display:grid;gap:10px}
+    label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    input,select{width:100%;background:#0A0A10;color:#fff;border:1px solid #33344A;border-radius:10px;padding:12px;font:15px Inter,sans-serif}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.45;color:#C5CED8}
+    .consent input{width:18px;height:18px;margin-top:2px;accent-color:var(--orange)}
+    .btn{appearance:none;border:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;font:700 16px Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:16px 22px}
+    .btn-red{background:linear-gradient(#FF3B3B,#C41018);color:#fff;width:100%;box-shadow:0 10px 24px rgba(227,27,35,.35)}
+    .btn-ghost{background:transparent;color:#fff;border:1.5px solid #fff}
+    .fine{font-size:12px;color:#9AA3B2;margin:8px 0 0}
+    .bar{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0}
+    .bar-in{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;font-size:13px;color:var(--muted)}
+    .bar b{color:#fff}
+    section{padding:56px 0}
+    h2{font:700 clamp(26px,4vw,40px)/1 Oswald,sans-serif;text-transform:uppercase;margin:0 0 14px}
+    h2 span{color:var(--orange)}
+    h3{font:600 18px Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px}
+    p{color:#D7DBE3;line-height:1.55}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+    .num{color:var(--orange);font:700 22px Oswald,sans-serif}
+    .prompt-box{background:#0A0A10;border:1px solid #2E2E40;border-radius:18px;overflow:hidden}
+    .prompt-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;background:#12121A;border-bottom:1px solid #2E2E40}
+    .prompt-top span{font:600 13px Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    pre{margin:0;padding:18px;white-space:pre-wrap;font:13.5px/1.5 ui-monospace,Menlo,Consolas,monospace;color:#E8EDF7}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+    .ok{list-style:none;padding:0;margin:0}
+    .ok li{padding:8px 0 8px 22px;position:relative;color:#D7DBE3}
+    .ok li:before{content:"→";position:absolute;left:0;color:var(--orange)}
+    .upsell{background:linear-gradient(180deg,#002448,#07070B);border-top:1px solid var(--line)}
+    .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 10px}
+    summary{cursor:pointer;font-weight:600}
+    footer{padding:28px 0 48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+    @media (max-width:900px){
+      .hero-grid,.two,.steps,.row2{grid-template-columns:1fr}
+      h1{font-size:44px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-in">
+      <a class="brand" href="https://ethicalai.me">
+        <div class="brand-mark">EA</div>
+        <span>ETHICAL AI</span>
+      </a>
+      <div class="free-pill">100% FREE</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">ETHICAL AI · INSIDER TRACK</p>
+        <h1>Force<br>Multiplier</h1>
+        <p class="tagline">Duplicate your work, without hiring a new person (yet).</p>
+        <p class="lede">Filefeed the three files you already work from. Paste one prompt. Any model becomes a Senior Apprentice on that job. You still sign. The kit lands in your inbox when you join Insider Track.</p>
+        <div class="price-row">
+          <span class="tag hot">KIT $0</span>
+          <span class="tag">INSIDER TRACK $0</span>
+          <span class="tag">NEXT STEP $0</span>
+        </div>
+        <div class="chips">
+          <span class="chip">Any model you already open</span>
+          <span class="chip">Don’t have one? No problem.</span>
+        </div>
+      </div>
+
+      <div class="capture-card" id="insider">
+        <h2>Join the <span>Insider Track</span></h2>
+        <p class="sub">Free kit emailed now. Free track after that. Nothing to buy on this page.</p>
+        <form id="kitForm" name="insider-track" method="post" action="#">
+          <div class="row2">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+          <div>
+            <label for="phone">Mobile</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(xxx) xxx-xxxx" />
+          </div>
+          <div class="row2">
+            <div>
+              <label for="craft">What you do</label>
+              <select id="craft" name="craft" required>
+                <option value="">Select</option>
+                <option>Estimator / construction / trades</option>
+                <option>Finance / operator</option>
+                <option>Owner / GM / dispatcher</option>
+                <option>Design / media / brand</option>
+                <option>Shop / kitchen / field service</option>
+                <option>Other specialist</option>
+              </select>
+            </div>
+            <div>
+              <label for="model">AI you open most</label>
+              <select id="model" name="model">
+                <option value="">Select</option>
+                <option>One tool I already open</option>
+                <option>I bounce between them</option>
+                <option>Local / other</option>
+                <option>I do not have one yet</option>
+              </select>
+            </div>
+          </div>
+          <label class="consent">
+            <input id="consent" name="comms_consent" type="checkbox" value="yes" required />
+            <span>I agree Ethical AI may contact me by <b>email, text/SMS, phone, voicemail, and other channels</b> about the free Force Multiplier kit, Insider Track, and related tools. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to quit texts. I can unsubscribe from email any time. Consent is not required to buy anything — there is nothing to buy here. I am 18+.</span>
+          </label>
+          <button class="btn btn-red" type="submit">Send the free kit</button>
+          <p class="fine">Files arrive by email after you submit. Reply STOP to quit texts.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="bar">
+    <div class="wrap bar-in">
+      <div><b>File Law</b> — your files beat the textbook</div>
+      <div><b>Senior Apprentice</b> — not a costume of you</div>
+      <div><b>Stamp stays</b> — you still sign</div>
+      <div><b>$0</b> — kit and track</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Four moves. <span>Then you check it.</span></h2>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>Filefeed</h3><p>Three files you already use: how you decide, how you work, one job you would still sign.</p></div>
+        <div class="step"><div class="num">02</div><h3>Any model</h3><p>Whatever you already open. Don’t have one? No problem.</p></div>
+        <div class="step"><div class="num">03</div><h3>Paste the prompt</h3><p>Senior Apprentice. Files outrank general training. No invented numbers.</p></div>
+        <div class="step"><div class="num">04</div><h3>Send-it test</h3><p>Would you put your name on it? If not, type the miss. Run it again.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prompt" style="padding-top:12px">
+    <div class="wrap">
+      <h2>The prompt. <span>Also in the email.</span></h2>
+      <p>Read it here. The full kit and variants go out after you join Insider Track.</p>
+      <div class="prompt-box">
+        <div class="prompt-top">
+          <span>Force Multiplier — Senior Apprentice</span>
+          <button class="btn btn-ghost" type="button" id="copyBtn" style="padding:10px 16px;font-size:13px;width:auto">Copy</button>
+        </div>
+        <pre id="promptText">The user uploaded their own working files from their craft.
+These files are the source of truth. They outrank your general training.
+
+You are not a generic expert in their industry.
+You are THIS person's Senior Apprentice. Copy their structure, labels, level of detail, refusals, and math.
+
+Rules:
+- Do not invent specs, counts, prices, formulas, code citations, or facts that are not in the files or in this chat.
+- If a number is not in the files or the user message, ask or mark it OPEN.
+- If the files are messy, incomplete, or conflicting, say so in one short block, then work with what is there.
+- Match the format they already use. If they bid in a spreadsheet layout, reproduce that layout. If they write a one-page quote, write that.
+- Separate FACT (from their files or this chat) / INFERENCE / GUESS.
+- You do not stamp, license, sign, or pretend a physical check happened.
+- End with: GAPS, ASSUMPTIONS, and the next physical action they take.
+
+First line: list the files you can see and what you think each one is for. Then do the job they just gave you.</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="upsell">
+    <div class="wrap two">
+      <div>
+        <h2>The next step is <span>also free.</span></h2>
+        <p>Insider Track is how the kit and later notes reach you. Same price as the kit: zero. Unsubscribe or STOP any time.</p>
+      </div>
+      <div class="card">
+        <h3>What you get</h3>
+        <ul class="ok">
+          <li>The Force Multiplier kit by email</li>
+          <li>Default, short, strict, and batch prompts</li>
+          <li>What to upload — your files, not ours</li>
+          <li>Insider Track notes — still $0</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <h2>Straight answers</h2>
+      <details open>
+        <summary>Is anything paid on this page?</summary>
+        <p>No. Kit $0. Insider Track $0. If that ever changes, it will say so in plain English.</p>
+      </details>
+      <details>
+        <summary>Why mobile?</summary>
+        <p>So the kit can reach you if email buries it, and so Insider Track can meet you where you answer. STOP works on texts.</p>
+      </details>
+      <details>
+        <summary>Is the model me?</summary>
+        <p>No. Senior Apprentice. You still drive. You still sign.</p>
+      </details>
+      <details>
+        <summary>Which AI do I need?</summary>
+        <p>None in particular. Same files, same prompt, on the model you already open. Don’t have one of the names above? No problem.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      Ethical AI · Frisco, TX · 469-669-2728 · ethicalai.me/force<br />
+      File Law. Textbook off. Stamp stays.
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Force Multiplier","description":"Duplicate your work, without hiring a new person (yet).","step":[{"@type":"HowToStep","name":"Join Insider Track"},{"@type":"HowToStep","name":"Get the kit by email"},{"@type":"HowToStep","name":"Filefeed three working files"},{"@type":"HowToStep","name":"Paste the Senior Apprentice prompt"}]}
+  </script>
+  <script>
+    const text = document.getElementById('promptText').innerText;
+    const btn = document.getElementById('copyBtn');
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = 'Copied';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1600);
+      } catch (e) {
+        window.getSelection().selectAllChildren(document.getElementById('promptText'));
+      }
+    });
+  </script>
+</body>
+</html>
