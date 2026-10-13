@@ -38,3 +38,7 @@ The internal CRM location ID was replaced with `REDACTED_GHL_LOCATION_ID` in hos
 
 ## License
 None yet — all rights reserved by default. Decision for the owner.
+
+## License
+
+CC BY 4.0. Free to use, share and adapt, including commercially. Just credit **Ethical AI** and link to https://ethicalai.me.
