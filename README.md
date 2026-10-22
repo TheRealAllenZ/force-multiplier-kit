@@ -1,7 +1,7 @@
 # Force Multiplier Kit — free lead magnet by Ethical AI
 
 Duplicate your work without hiring a new person (yet). Feed an AI the three files you already use, run one prompt, any AI.
-Live page: https://ethicalai.me/force · Contact: info@ethicalai.me
+Live page: https://ethicalai.me/force · Contact: hello@ethicalai.me
 
 ## File map
 | Path | What it is |
